@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FZau4+m5TOyfMYwIRWvWpjWfvqdKdyWIBgUfTh6ZWgKuoPgV6B+ZpqtqhOUkTi3PHJLeNCgX2em734nDf8U/8g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vampi\\OneDrive\\Desktop\\epicodus\\C#\\MessageClient.Solution\\Client\\Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vampi\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\vampi\\.nuget\\packages\\restsharp\\106.6.10\\restsharp.106.6.10.nupkg.sha512"
+  ],
+  "logs": []
+}
