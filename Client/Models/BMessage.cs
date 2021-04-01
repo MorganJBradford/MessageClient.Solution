@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace MessageClient.Models
 {
@@ -8,6 +11,24 @@ namespace MessageClient.Models
     public string Message { get; set; }
     public DateTime Posted { get; set; }
     public int GroupId { get; set; }
+
+    public static List<BMessage> GetBMessage()
+    {
+      var apiCallTask = ApiHelper.GetAll();
+      var result = apiCallTask.Result;
+
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<BMessage> messageList = JsonConvert.DeserializeObject<List<BMessage>>(jsonResponse.ToString());
+    }
+
+    public static BMessage GetDetails(int id)
+    {
+      var apiCallTask = ApiHelper.Get(id);
+      var result = apiCallTask.Result;
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      BMessage message = Json
+    }
 
   }
 }
