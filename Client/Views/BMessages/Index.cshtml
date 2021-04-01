@@ -7,6 +7,8 @@
 <form action="/messages" method="post">
   <label for ="message">Message</label>
   <input id="message" name="message" type="text">
+  <label for ="topic">Topic</label>
+  <input id="topic" name="topic" type="text">
 
 </form>
 
@@ -17,7 +19,7 @@
 {
   <ul>
       <li>ID: @message.BMessageId</li>
-      <li>Group: @message.GroupId</li>
+      <li>Topic: @message.Topic</li>
       <li>Content: @message.Message</li>
   </ul>
 
