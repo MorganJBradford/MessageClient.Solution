@@ -1,0 +1,9 @@
+<h1>Edit Message</h1>
+<form action="BMessages/Details/@(Model.BMessageId)" method="post">
+  <label for="message">Message</label>
+  <input id="message" name="message" type="text" value="@(Model.BMessage)">
+  <label for="topic">Topic</label>
+  <input id="topic" name="topic" type="text" value="@(Model.Topic)">
+</form>
+
+<a href="/BMessages/Details/@(Model.BMessageId)"><p>Return to Details</p></a>
