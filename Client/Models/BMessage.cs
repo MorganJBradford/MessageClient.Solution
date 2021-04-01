@@ -11,7 +11,7 @@ namespace Client.Models
     public int BMessageId { get; set; }
     public string Message { get; set; }
     public DateTime Posted { get; set; }
-    public int GroupId { get; set; }
+    public string Topic { get; set; }
 
     public static List<BMessage> GetBMessage()
     {
