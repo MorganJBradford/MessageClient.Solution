@@ -38,5 +38,11 @@ namespace MessageClient.Models
       var apiCallTask = ApiHelper.Post(jsonBMessage);
     }
 
+    public static void Put(BMessage message)
+    {
+      string jsonBMessage = JsonConvert.SerializeObject(message);
+      var apiCallTask = ApiHelper.Pu
+    }
+
   }
 }
