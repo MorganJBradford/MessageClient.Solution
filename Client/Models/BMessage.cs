@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 
-namespace MessageClient.Models
+namespace Client.Models
 {
   public class BMessage
   {
