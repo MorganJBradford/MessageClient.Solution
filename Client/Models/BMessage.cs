@@ -27,7 +27,7 @@ namespace MessageClient.Models
       var result = apiCallTask.Result;
 
       JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
-      BMessage message = Json
+      BMessage message = JsonConvert.DeserializeObject<BMessage>(jsonResponse.ToString());
     }
 
   }
