@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+
 namespace MessageClient.Models
 {
   public class BMessage
@@ -41,7 +42,12 @@ namespace MessageClient.Models
     public static void Put(BMessage message)
     {
       string jsonBMessage = JsonConvert.SerializeObject(message);
-      var apiCallTask = ApiHelper.Pu
+      var apiCallTask = ApiHelper.Put(message.BMessageId, jsonBMessage);
+    }
+
+    public static void Delete(int id)
+    {
+      var apiCallTask = ApiHelper.Delete(id);
     }
 
   }

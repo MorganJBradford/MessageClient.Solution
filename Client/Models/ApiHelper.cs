@@ -3,7 +3,7 @@ using RestSharp;
 
 namespace MessageClient.Models
 {
-  class ApHelper
+  class ApiHelper
   {
     public static async Task<string> GetAll()
     {
