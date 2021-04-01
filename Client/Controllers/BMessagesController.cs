@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MessageClient.Models;
+using Client.Models;
 
-namespace MessageClient.Controllers
+namespace Client.Controllers
 {
   public class BMessagesController : Controller
   {
