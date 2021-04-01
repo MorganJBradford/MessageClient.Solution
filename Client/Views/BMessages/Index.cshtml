@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>New Message:</h1>
+
+<form action="/messages" method="post">
+  <label for ="message">Message</label>
+  <input id="message" name="message" type="text">
+
+</form>
+
+<h1>View all Messages:</h1>
+
+<ol>
+@foreach (BMessage message in Model)
+{
+  <ul>
+      <li>ID: @message.BMessageId</li>
+      <li>Group: @message.GroupId</li>
+      <li>Content: @message.Message</li>
+  </ul>
+
+  <a href="BMessages/Details/@(message.BMessageId)"><p>View Details</p></a>
+  <br>
+}
+</ol>
