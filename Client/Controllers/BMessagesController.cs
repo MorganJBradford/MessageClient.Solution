@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MessiageClient.Models;
+using MessageClient.Models;
 
 namespace MessageClient.Controllers
 {
@@ -22,9 +22,30 @@ namespace MessageClient.Controllers
       return RedirectToAction("Index");
     }
 
-    public IActionResult Detail(int id)
+    public IActionResult Details(int id)
     {
-      var message = BMessage.GetDetails(id)
+      var message = BMessage.GetDetails(id);
+      return View(message);
+    }
+
+    public IActionResult Edit(int id)
+    {
+      var message = BMessage.GetDetails(id);
+      return View(message);
+    }
+
+    [HttpPost]
+    public IActionResult Details(int id, BMessage message)
+    {
+      message.BMessageId = id;
+      BMessage.Put(message);
+      return RedirectToAction("Details", id);
+    }
+
+    public IActionResult Delete(int id)
+    {
+      BMessage.Delete(id);
+      return RedirectToAction("Index");
     }
   }
 }
