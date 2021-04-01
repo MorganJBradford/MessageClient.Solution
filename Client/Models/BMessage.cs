@@ -19,6 +19,7 @@ namespace MessageClient.Models
 
       JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
       List<BMessage> messageList = JsonConvert.DeserializeObject<List<BMessage>>(jsonResponse.ToString());
+      return messageList;
     }
 
     public static BMessage GetDetails(int id)
@@ -28,6 +29,13 @@ namespace MessageClient.Models
 
       JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
       BMessage message = JsonConvert.DeserializeObject<BMessage>(jsonResponse.ToString());
+      return message;
+    }
+
+    public static void Post(BMessage message)
+    {
+      string jsonBMessage = JsonConvert.SerializeObject(message);
+      var apiCallTask = ApiHelper.Post(jsonBMessage);
     }
 
   }
